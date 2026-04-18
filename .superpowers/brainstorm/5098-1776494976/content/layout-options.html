@@ -1,0 +1,45 @@
+<h2>您希望前端采用哪种基础布局？</h2>
+<p class="subtitle">考虑到这是一个 PWA 应用（类似原生 App 体验），同时需要简洁高效。</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>卡片式布局 (类似 Google 翻译)</h3>
+      <p>上下或左右双卡片结构。上方输入/语音，下方显示翻译结果。特点：非常直观，专注单次任务，翻译效率极高。</p>
+      <div style="margin-top: 10px; border: 1px solid #ccc; padding: 10px; border-radius: 8px;">
+         <div class="mock-input">中文输入区 🎤</div>
+         <div class="mock-content" style="margin-top: 5px;">英文输出区 🔊</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>对话框布局 (类似微信聊天)</h3>
+      <p>气泡对话列表。底部一个固定输入框和语音按住说话按钮。特点：适合保留历史记录，更有“外语助教”的互动感。</p>
+      <div style="margin-top: 10px; border: 1px solid #ccc; padding: 10px; border-radius: 8px; height: 80px; display: flex; flex-direction: column; justify-content: flex-end;">
+         <div style="align-self: flex-end; background: #007bff; color: white; padding: 5px; border-radius: 5px; margin-bottom: 5px; font-size: 12px;">你好</div>
+         <div style="align-self: flex-start; background: #f1f1f1; padding: 5px; border-radius: 5px; margin-bottom: 5px; font-size: 12px;">Hello 🔊</div>
+         <div class="mock-input" style="height: 20px;">🎤 按住说话</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>底部导航式 (标准 App 布局)</h3>
+      <p>底部标签栏（例如：翻译、对话、生词本）。主屏幕空间大，功能切换清晰。特点：最符合现代移动端 App 操作习惯。</p>
+      <div style="margin-top: 10px; border: 1px solid #ccc; padding: 0; border-radius: 8px; overflow: hidden;">
+         <div class="mock-content" style="height: 60px; display: flex; align-items: center; justify-content: center;">主功能区</div>
+         <div style="display: flex; background: #eee; border-top: 1px solid #ccc; font-size: 12px;">
+            <div style="flex: 1; text-align: center; padding: 5px;">翻译</div>
+            <div style="flex: 1; text-align: center; padding: 5px;">对话</div>
+            <div style="flex: 1; text-align: center; padding: 5px;">我的</div>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>

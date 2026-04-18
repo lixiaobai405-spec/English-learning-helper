@@ -1,0 +1,58 @@
+<h2>交互与按钮布局</h2>
+<p class="subtitle">既然我们确定了“上下卡片式布局”，接下来我们看看操作按钮（如语音输入、朗读、复制等）该如何放置？</p>
+
+<div class="options">
+  <div class="option" data-choice="integrated" onclick="toggleSelect(this)">
+    <div class="letter">1</div>
+    <div class="content">
+      <h3>卡片内嵌工具栏 (推荐)</h3>
+      <p>按钮集成在各自语言卡片的底部。功能最明确，中英文发音按钮分开。最符合“简洁高效”的要求。</p>
+      <div style="margin-top: 10px; border: 1px solid #ccc; padding: 10px; border-radius: 8px;">
+         <div style="font-size: 14px; margin-bottom: 20px; color: #555;">中文 (点击输入)</div>
+         <div style="display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 5px;">
+            <div style="color: #007bff;">🎤 语音输入</div>
+            <div style="color: #666;">❌ 清空</div>
+         </div>
+      </div>
+      <div style="margin-top: 10px; border: 1px solid #ccc; padding: 10px; border-radius: 8px; background: #f8f9fa;">
+         <div style="font-size: 14px; margin-bottom: 20px; color: #555;">English</div>
+         <div style="display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 5px;">
+            <div style="color: #007bff;">🔊 朗读</div>
+            <div style="color: #666;">📋 复制</div>
+         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="fab" onclick="toggleSelect(this)">
+    <div class="letter">2</div>
+    <div class="content">
+      <h3>悬浮大按钮 (FAB)</h3>
+      <p>在屏幕中下方放置一个非常醒目的悬浮“麦克风”大按钮。适合高频语音用户，但文字操作相对较弱。</p>
+      <div style="margin-top: 10px; border: 1px solid #ccc; padding: 10px; border-radius: 8px; height: 180px; position: relative;">
+         <div style="height: 80px; border-bottom: 1px solid #eee;">中文卡片...</div>
+         <div style="height: 80px;">英文卡片...</div>
+         <div style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); width: 50px; height: 50px; background: #007bff; color: white; border-radius: 25px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+            🎤
+         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="bottom_bar" onclick="toggleSelect(this)">
+    <div class="letter">3</div>
+    <div class="content">
+      <h3>底部固定操作栏</h3>
+      <p>操作区域与展示区域完全分离。底部固定一行操作按钮，卡片区仅用于显示文本。</p>
+      <div style="margin-top: 10px; border: 1px solid #ccc; padding: 0; border-radius: 8px; overflow: hidden; height: 180px; display: flex; flex-direction: column;">
+         <div style="flex: 1; padding: 10px; border-bottom: 1px solid #eee;">中文区...</div>
+         <div style="flex: 1; padding: 10px; background: #f8f9fa;">英文区...</div>
+         <div style="height: 40px; background: #333; color: white; display: flex; align-items: center; justify-content: space-around; font-size: 12px;">
+            <span>⌨️ 键盘</span>
+            <span>🎤 中文语音</span>
+            <span>🎤 英文语音</span>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
