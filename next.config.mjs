@@ -8,6 +8,9 @@ const withPWA = withPWAInit({
 });
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  // Silence Next.js 16 turbopack/webpack mismatch warning caused by next-pwa
+  turbopack: {}
+};
 
 export default withPWA(nextConfig);
