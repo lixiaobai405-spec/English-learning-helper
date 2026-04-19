@@ -183,7 +183,7 @@ export default function Home() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-[60vh] min-h-[400px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-[350px] md:auto-rows-auto md:h-[65vh] min-h-[400px]">
           <TranslationCard
             title="输入文本 (中文/英文)"
             text={sourceText}
